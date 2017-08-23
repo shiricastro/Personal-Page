@@ -1,0 +1,153 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Khula', sans-serif;
+}
+/***header***/
+header{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 5px;
+	right: 0;
+	left: 0;
+    z-index: 10;
+	background-color: rgb(50,50,50);
+}
+.nav{
+	display: flex;
+	padding:0;
+}
+.nav li{
+	list-style: none;
+	margin-right: 2rem;
+}
+.navLink{
+	color:black;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+.medialink{
+	font-size: 38px;
+}
+.mediaIcon{
+	vertical-align: middle;
+}
+.githubIcon{
+	width: 38px;
+}
+
+/***container***/
+.mainContainer{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background: url("img/colombia.jpg");
+	box-shadow: inset 0 0 0 1000px rgba(55,55,55,0.3);
+	background-size: 100% 100%;
+	padding: 3rem 0;
+
+}
+.mainContainer h1{
+	/*font-family: 'Khula', sans-serif;*/
+	/*font-family: 'Alex Brush', cursive;*/
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 5rem;
+	font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 20px honeydew;
+    margin-bottom: 0;
+    margin-top:5rem;
+}
+.mainContainer h2{
+	margin-top: .5rem;
+    margin-bottom: 6rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(30,30,30);
+}
+
+/*******************************/
+.wrapMain{
+	display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.projectMain{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border: 1px solid hotpink;
+    margin: .5rem 0;
+    padding: 2rem;
+}
+.projectMain img{
+	max-width: 250px;
+	max-height: 250px;
+	width: 100%;
+}
+/*.discription{
+	margin-left: 6rem;
+}*/
+.discription{
+	max-width: 100%;
+    width: 425px;
+}
+.discription span{
+	font-size: 1.5rem;
+    font-weight: bold;
+}
+.discription p{
+	font-size: 1.1rem;
+}
+/************************/
+.warp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+}/**********************/
+
+/*.hoverP{
+	display: none;
+}
+.project:hover .hoverP{
+	display: block;
+}*/
+.project{
+    background-color: blue;
+    border: 1px solid pink;
+    position: relative;
+    box-sizing: border-box;
+    max-height: 289px;
+    max-width: 280px;
+    overflow: hidden;
+}
+.hoverP{
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(128, 0, 128);
+    display: none;
+
+}
+.hoverP span{
+	margin-top: 20%;
+    font-weight: bold;
+    font-size: 1.5rem;	
+}
+.hoverP p{
+	max-width: 80%;
+    margin: 0 auto;
+}
+.project:hover .hoverP{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
