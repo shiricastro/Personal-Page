@@ -15,6 +15,9 @@ header{
     z-index: 10;
 	background-color: rgb(50,50,50);
 }
+.container{
+	/*background-color: rgb(50,50,50);*/
+}
 .nav{
 	display: flex;
 	padding:0;
@@ -43,9 +46,10 @@ header{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	background: url("img/colombia.jpg");
+/*	background: url("img/colombia.jpg");
 	box-shadow: inset 0 0 0 1000px rgba(55,55,55,0.3);
-	background-size: 100% 100%;
+	background-size: 100% 100%;*/
+	background-color: #e6e6e6;
 	padding: 3rem 0;
 
 }
@@ -55,7 +59,7 @@ header{
 	font-family: 'Petit Formal Script', cursive;
 	font-size: 5rem;
 	font-weight: 400;
-    color: white;
+    /*color: white;*/
     text-shadow: 1px 1px 20px honeydew;
     margin-bottom: 0;
     margin-top:5rem;
@@ -78,19 +82,29 @@ header{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: lightgray;
-    border: 1px solid hotpink;
-    margin: .5rem 0;
+/*    background-color: #f8f8f8;*/
+    margin:0;
     padding: 2rem;
 }
-.projectMain img{
-	max-width: 250px;
+.projectMain:nth-child(2){
+    background-color: #e6e6e6;
+}
+.projectImg{
+	position: relative;
+}
+.projectImg img{
 	max-height: 250px;
 	width: 100%;
 }
-/*.discription{
-	margin-left: 6rem;
-}*/
+.computer{
+	max-width: 250px;
+}
+.iphon{
+	max-width: 170px;
+	position: absolute;
+    bottom: 0;
+    right: 65%;
+}
 .discription{
 	max-width: 100%;
     width: 425px;
@@ -109,7 +123,7 @@ header{
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 10rem;
+/*    margin-bottom: 10rem;*/
 }/**********************/
 
 /*.hoverP{
@@ -119,13 +133,16 @@ header{
 	display: block;
 }*/
 .project{
-    background-color: blue;
-    border: 1px solid pink;
     position: relative;
     box-sizing: border-box;
-    max-height: 289px;
+    max-height: 284px;
     max-width: 280px;
     overflow: hidden;
+    margin-right: .2rem;
+}
+.mainP img{
+	width: 100%;
+    height: 280px;
 }
 .hoverP{
 	position: absolute;
@@ -133,8 +150,9 @@ header{
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgb(128, 0, 128);
+    background-color: wheat;
     display: none;
+    height: 280px;
 
 }
 .hoverP span{
@@ -146,8 +164,53 @@ header{
 	max-width: 80%;
     margin: 0 auto;
 }
+.hoverP button{
+	padding: 6px 10px;
+    margin: 0 auto;
+    border-radius: 2px;
+    background: none;
+    border: 1px solid gray;
+}
+.hoverP button a{
+	text-decoration: none;
+}
+.hoverP button a:active,
+.hoverP button a:visited{
+	color:black;
+}
 .project:hover .hoverP{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+#projects{
+	margin-bottom: 2rem;
+}
+#about{
+	position: relative;
+	margin-bottom: 5rem;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(50,50,50);
+}
+#about img{
+	width: 600px;
+	max-width: 100%;
+}
+#about p{
+    padding-left: 8rem;
+    color: wheat;
+    font-size: 1.3rem;
+    width: 500px;
+    max-width: 100%;
+}
+.aboutDesign{
+	position: absolute;
+	left: 0;
+	bottom: 1rem;
+	background-color: rgba(245,222,179,.7);
+	width: 700px;
+	max-width: 50%;
+	height: 80px;
 }
