@@ -13,7 +13,7 @@ header{
 	right: 0;
 	left: 0;
     z-index: 10;
-	background-color: rgb(50,50,50);
+	background-color: rgba(0,0,0,.6);
 }
 .container{
 	/*background-color: rgb(50,50,50);*/
@@ -24,16 +24,18 @@ header{
 }
 .nav li{
 	list-style: none;
-	margin-right: 2rem;
+    padding: 0 2rem;
+    border-right: 1px solid white;
+}
+.nav li:last-child{
+	border:none;
 }
 .navLink{
 	color:black;
 	text-decoration: none;
 	font-size: 1.1rem;
 }
-.medialink{
-	font-size: 38px;
-}
+
 .mediaIcon{
 	vertical-align: middle;
 }
@@ -42,6 +44,7 @@ header{
 }
 
 /***container***/
+
 .mainContainer{
 	display: flex;
 	flex-direction: column;
@@ -66,17 +69,29 @@ header{
 }
 .mainContainer h2{
 	margin-top: .5rem;
-    margin-bottom: 6rem;
+    margin-bottom: .5rem;
     font-size: 2.5rem;
     font-weight: 500;
     color: rgb(30,30,30);
 }
+.linkNav{
+    border-top: 1px solid gray;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 440px;
+    text-align: center;
+}
+.medialink{
+	font-size: 38px; 
+	margin: 0 .3rem;
+}
 
 /*******************************/
 .wrapMain{
-	display: flex;
+    display: flex;
     flex-direction: column;
     margin: 0 auto;
+    width: 90%;
 }
 .projectMain{
     display: flex;
@@ -86,9 +101,9 @@ header{
     margin:0;
     padding: 2rem;
 }
-.projectMain:nth-child(2){
+/*.projectMain:nth-child(2){
     background-color: #e6e6e6;
-}
+}*/
 .projectImg{
 	position: relative;
 }
@@ -123,7 +138,6 @@ header{
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-/*    margin-bottom: 10rem;*/
 }/**********************/
 
 /*.hoverP{
@@ -186,13 +200,20 @@ header{
 #projects{
 	margin-bottom: 2rem;
 }
+#projects h2,
+#contact h2{
+    padding: 1rem 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0;
+    text-align: center;
+}
 #about{
-	position: relative;
-	margin-bottom: 5rem;
-	display: flex;
-	flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: rgb(50,50,50);
 }
 #about img{
 	width: 600px;
@@ -200,17 +221,65 @@ header{
 }
 #about p{
     padding-left: 8rem;
-    color: wheat;
+/*    color: wheat;*/
     font-size: 1.3rem;
     width: 500px;
     max-width: 100%;
 }
-.aboutDesign{
+.aboutDesignL,
+.aboutDesignR{
 	position: absolute;
-	left: 0;
-	bottom: 1rem;
 	background-color: rgba(245,222,179,.7);
+/*	width: 100%;*/
 	width: 700px;
 	max-width: 50%;
-	height: 80px;
+	height: 80px;		
+}
+.aboutDesignL{
+	left: 0;
+	bottom: 1rem;
+}
+.aboutDesignR{
+	right: 0;
+	top: 1rem;
+}
+
+/***contact***/
+.contactContainer{
+	width: 90%;
+	margin:0 auto;
+	margin-bottom: 5rem;
+}
+.contactContainer h3,
+.contactContainer h4.job{
+	text-align: center;
+}
+.contactContainer h3{
+    margin: 2rem 0 0 0;
+    font-size: 1.3rem;
+}
+.contactContainer h4.job{
+	    margin-top: 0;
+}
+.contWrap{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.contactContainer ul{
+	padding:0;
+	margin:0 2rem 1.5rem;
+}
+.contactContainer ul li{
+	list-style: none;
+}
+.contactContainer ul li h4{
+	margin:0;
+	margin-top: 1rem;
+}
+.linkNavContact .medialink img{
+	width: 25px;
+}
+.linkNavContact .medialink img.githubIcon {
+	width: 30px;
 }
