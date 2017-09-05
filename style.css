@@ -32,7 +32,6 @@ header{
 	cursor: pointer;
 	outline: none;
 }
-
 .nav{
 	display: flex;
     padding: 0;
@@ -151,14 +150,14 @@ header{
 .discription p{
 	font-size: 1.1rem;
 }
-/************************/
+
 .warp{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-}/**********************/
+}
 
 .project{
     position: relative;

@@ -38,8 +38,13 @@
 	.nav li:nth-child(3) {
 		display: none;
 	}
-	.nav{
+	.activeNav{
 		display: none;
+	}
+	.activeHeader{
+		background-color: rgb(102,102,102);
+	}
+	.nav{
 		position: absolute;
 		bottom: 49px;
 		flex-direction: column;
