@@ -5,31 +5,53 @@ body{
 }
 /***header***/
 header{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	position: fixed;
-	bottom: 5px;
-	right: 0;
-	left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 5px;
+    right: 0;
+    left: 0;
     z-index: 10;
-	background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,0.6);
+    max-height: 61px;
 }
-.container{
-	/*background-color: rgb(50,50,50);*/
+.logo,
+.navButton{
+	display: none;
 }
+.navButton{
+	border:none;
+	background-color: transparent;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-left: 10rem;
+}
+.navButton:hover,
+.navButton:focus{
+	cursor: pointer;
+	outline: none;
+}
+
 .nav{
 	display: flex;
-	padding:0;
+    padding: 0;
+    position: relative;
+}
+.nav li:nth-child(3) {
+	position: relative;
+    top: -15px;
+}
+.nav li:nth-child(3) img,
+.logo{
+	width: 65.79px;
+    height: 80.48px;
 }
 .nav li{
 	list-style: none;
     padding: 0 2rem;
-    border-right: 1px solid white;
 }
-.nav li:last-child{
-	border:none;
-}
+
 .navLink{
 	color:black;
 	text-decoration: none;
@@ -38,9 +60,10 @@ header{
 
 .mediaIcon{
 	vertical-align: middle;
+	width: 28px;
 }
 .githubIcon{
-	width: 38px;
+	width: 34px;
 }
 
 /***container***/
@@ -49,36 +72,38 @@ header{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-/*	background: url("img/colombia.jpg");
+	background: url("img/s.png") repeat-x fixed, url("img/sky.png") no-repeat  fixed;
+	animation-name: stars;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 	box-shadow: inset 0 0 0 1000px rgba(55,55,55,0.3);
-	background-size: 100% 100%;*/
+	background-size: 300px,100% 200px;
 	background-color: #e6e6e6;
 	padding: 3rem 0;
 
 }
-.mainContainer h1{
-	/*font-family: 'Khula', sans-serif;*/
-	/*font-family: 'Alex Brush', cursive;*/
-	font-family: 'Petit Formal Script', cursive;
-	font-size: 5rem;
-	font-weight: 400;
-    /*color: white;*/
-    text-shadow: 1px 1px 20px honeydew;
-    margin-bottom: 0;
-    margin-top:5rem;
+@keyframes stars {
+    from {background-position: top left , top;}
+    to {background-position: top right, top;}
+}
+
+.mainContainer .name img{
+	width: 650px;
+	max-width: 95%;
 }
 .mainContainer h2{
-	margin-top: .5rem;
+    margin-top: 0;
     margin-bottom: .5rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: rgb(30,30,30);
 }
 .linkNav{
     border-top: 1px solid gray;
-    width: 90%;
+    width: 55%;
     margin: 0 auto;
-    max-width: 440px;
+    max-width: 305px;
     text-align: center;
 }
 .medialink{
@@ -97,28 +122,23 @@ header{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-/*    background-color: #f8f8f8;*/
+    border-left: 20px solid rgba(245,222,179,.7);
+	border-bottom:10px solid rgba(245,222,179,.7);
     margin:0;
-    padding: 2rem;
+    padding: 3rem;
 }
-/*.projectMain:nth-child(2){
-    background-color: #e6e6e6;
-}*/
-.projectImg{
-	position: relative;
+.projectMain:last-child {
+    border-bottom: 0;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
 }
-.projectImg img{
-	max-height: 250px;
-	width: 100%;
+.projectMain:nth-child(2){
+	border-right: 20px solid rgba(245,222,179,.7);
+	border-left: 0;
 }
 .computer{
-	max-width: 250px;
-}
-.iphon{
-	max-width: 170px;
-	position: absolute;
-    bottom: 0;
-    right: 65%;
+	max-width: 400px;
+	width: 100%;
 }
 .discription{
 	max-width: 100%;
@@ -140,12 +160,6 @@ header{
     margin: 0 auto;
 }/**********************/
 
-/*.hoverP{
-	display: none;
-}
-.project:hover .hoverP{
-	display: block;
-}*/
 .project{
     position: relative;
     box-sizing: border-box;
@@ -212,28 +226,36 @@ header{
     margin: 0 auto;
     margin-bottom: 3rem;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
 #about img{
-	width: 600px;
+	width: 50%;
 	max-width: 100%;
 }
 #about p{
-    padding-left: 8rem;
-/*    color: wheat;*/
+    padding-right: 1.5rem;
     font-size: 1.3rem;
-    width: 500px;
+    width: 45%;
     max-width: 100%;
 }
 .aboutDesignL,
 .aboutDesignR{
 	position: absolute;
 	background-color: rgba(245,222,179,.7);
-/*	width: 100%;*/
 	width: 700px;
 	max-width: 50%;
-	height: 80px;		
+	height: 80px;
+	padding:0 1rem;
+	animation-name: divsMove;
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;		
+}
+
+@keyframes divsMove {
+    from {width: 0px;}
+    to {width: 700px;}
 }
 .aboutDesignL{
 	left: 0;

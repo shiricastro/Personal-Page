@@ -1,0 +1,137 @@
+@media (max-width: 1080px){
+	#about p {
+	    font-size: 1.1rem;
+	}
+}
+@media (max-width: 960px){
+	.aboutDesignL,
+	.aboutDesignR {
+	    height: 60px;
+	}
+}
+@media (max-width: 950px){
+	.projectMain .discription{
+	    margin-bottom: 1rem;
+	}
+	.projectMain:nth-child(2) .discription{
+		margin-bottom: 0;
+		margin-top: 1.5rem;
+	}
+}
+@media (max-width: 850px){
+	#about img{
+		width: 100%;
+	}
+	.aboutDesignL{
+	    display: none;
+	}
+	#about p {
+	    position: absolute;
+	    right: 0;
+	    background-color: rgba(245,222,179,.7);
+	    width: 700px;
+	    max-width: 50%;
+	    padding: 2rem 1rem;
+	}
+}
+@media (max-width: 675px){
+	.nav li:nth-child(3) {
+		display: none;
+	}
+	.nav{
+		display: none;
+		position: absolute;
+		bottom: 49px;
+		flex-direction: column;
+		background-color: rgb(102,102,102);
+		width: 100%;
+		padding:1rem 0;
+		text-align: center;
+	}
+	.nav li{
+		margin:0 auto;
+		width: 60%;
+		padding:.7rem 0;
+		border-bottom: 1px solid rgba(255,255,255,.2);
+	}
+	.nav li:last-child{
+		border:none;
+	}
+
+
+	.logo,
+	.navButton{
+		display: block;
+	}
+
+}
+@media (max-width: 620px){
+	.mainContainer h2{
+		font-size: 1.3rem;
+	}
+	.medialink img{
+		width: 25px;
+	}
+	img.githubIcon{
+		width: 30px;
+	}
+
+}
+@media (max-width: 550px){
+	.projectMain{
+		padding: 2rem 1rem;	
+	}
+	.discription span{
+		font-size: 1.3rem;
+	}
+	.discription p {
+	    font-size: 1rem;
+	}
+	.aboutDesignL{
+	    display: block;
+	    padding: 0;
+	    max-width: 100%;
+	}
+	#about{
+		margin-bottom: 1rem;
+	}
+	#about p {
+	    position: relative;
+	    background-color:white;
+	    max-width: 95%;
+	    text-align: center;
+	    padding: 0 1rem;
+	    margin-bottom: 100px;
+	}
+
+}
+@media (max-width: 532px){
+	.contWrap ul:first-child{
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 470px){
+	.mainContainer h2{
+		font-size: 1.1rem;
+	}
+	.discription span {
+	    font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 366px){
+	.mainContainer h2{
+		font-size: .9rem;
+	}
+	#about p {
+    	font-size: 1rem;
+	}
+}
+@media (max-width: 300px){
+	.navButton{
+		margin:0;
+	}
+	header{
+		justify-content: space-between;
+	}
+}
