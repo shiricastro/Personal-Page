@@ -89,7 +89,8 @@
 	.discription span{
 		font-size: 1.3rem;
 	}
-	.discription p {
+	.discription p ,
+	.githubLink a{
 	    font-size: 1rem;
 	}
 	.aboutDesignL{
