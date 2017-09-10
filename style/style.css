@@ -245,6 +245,7 @@ header{
 }
 .hoverP button a{
 	text-decoration: none;
+    color:black;
 }
 .hoverP button a:active,
 .hoverP button a:visited{
